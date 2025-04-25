@@ -1,0 +1,55 @@
+
+## Setup Instructions
+
+### Prerequisites
+
+- Python 3.x
+- Pip (Python package installer)
+
+### Installation
+
+1. Clone this repository:
+
+    ```bash
+    git clone https://github.com/yourusername/recommender-system.git
+    cd recommender-system
+    ```
+
+2. Install the required dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Run the notebooks to see the step-by-step implementation.
+
+### Dependencies
+
+The project depends on the following Python libraries:
+
+- `surprise` - For building the recommendation models.
+- `pandas` - For data manipulation.
+- `numpy` - For numerical operations.
+- `scikit-learn` - For evaluation metrics.
+- `matplotlib` - For visualization.
+
+### Running the Code
+
+- **Data Preprocessing**: Run `01_data_preprocessing.ipynb` to preprocess the dataset.
+- **Model Training**: Run `02_user_based_cf.ipynb` for User-Based Collaborative Filtering or `03_item_based_cf.ipynb` for Item-Based Collaborative Filtering.
+- **Evaluation**: Run `04_evaluation_and_visualization.ipynb` to evaluate the model and visualize the results.
+
+### Results
+
+After running the evaluation code, the evaluation metrics and the top N recommendations for users will be saved in the `results/` directory:
+- `evaluation_metrics.json`: Contains RMSE, Precision@K, and Recall@K.
+- `top_n_recommendations.csv`: Contains the top N recommendations for each user.
+
+### Example Output
+
+```json
+{
+  "rmse": 0.9445,
+  "precision_at_10": 0.7523,
+  "recall_at_10": 0.6184
+}
